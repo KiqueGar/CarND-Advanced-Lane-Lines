@@ -26,6 +26,7 @@
 [image8]: ./output_images/pipeline/3detected_color.jpg "Detect lines"
 [image9]: ./output_images/pipeline/3result.jpg "Detect lines"
 [image10]: ./output_images/test2_sobel.jpg "Messy lines"
+[image11]: ./output_images/PixelToMeter.jpg "Meters/pixel"
 
 [video1]: ./Good_to_go.mp4 "Video"
 
@@ -123,6 +124,11 @@ curvature and lane center are then imprinted on the transformed image on
 `def unwarp_color`
 
 ![alt text][image8]
+
+It´s important to note the convertion between pixels and meters, conversion
+was done assuming lane is 3.7 meters wide and dashed lines are 3 meters:
+
+![alt text][image11]
 
 Then, the detected image is added to the original image inside the pipeline (`def new_pipeline`) to generate the result
 
